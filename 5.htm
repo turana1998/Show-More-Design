@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>JS</title>
+</head>
+
+<body>
+    <div>
+        <p></p>
+
+    </div><button onclick="Show()">Göstər</button>
+    <script>
+        let str = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, hic explicabo corporis consectetur
+        praesentium
+        minus amet consequatur mollitia quia, quam dolore repudiandae cupiditate illum, natus rem impedit! Qui, suscipit
+        vitae.Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, hic explicabo corporis consectetur
+        praesentium minus amet consequatur mollitia quia, quam dolore repudiandae cupiditate illum, natus rem impedit!
+        Qui, suscipit vitae.Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, hic explicabo corporis
+        consectetur praesentium minus amet consequatur mollitia quia, quam dolore repudiandae cupiditate illum, natus
+        rem impedit! Qui, suscipit vitae.Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, hic explicabo
+        corporis consectetur praesentium minus amet consequatur mollitia quia, quam dolore repudiandae cupiditate illum,
+        natus rem impedit! Qui, suscipit vitae.Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, hic
+        explicabo corporis consectetur praesentium minus amet consequatur mollitia quia, quam dolore repudiandae
+        cupiditate illum, natus rem impedit! Qui, suscipit vitae.Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Unde, hic explicabo corporis consectetur praesentium minus amet consequatur mollitia quia, quam dolore
+        repudiandae cupiditate illum, natus rem impedit! Qui, suscipit vitae.Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Unde, hic explicabo corporis consectetur praesentium minus amet consequatur mollitia quia,
+        quam dolore repudiandae cupiditate illum, natus rem impedit! Qui, suscipit vitae.Lorem ipsum dolor sit amet
+        consectetur adipisicing elit.`;
+        document.getElementsByTagName("p")[0].innerHTML = str.substring(0, 120) + "<a href='#' onclick='Show()'>... ardını oxu</a>";
+        function Show() {
+            let btn = document.getElementsByTagName("button")[0];
+            if (btn.innerHTML=="Göstər") {
+                document.getElementsByTagName("button")[0].innerHTML = "Gizlə";
+                document.getElementsByTagName("p")[0].innerHTML = str;
+                
+            } else {
+                document.getElementsByTagName("p")[0].innerHTML = str.substring(0, 120) + "<a href='#' onclick='Show()'>... ardını oxu</a>";
+                document.getElementsByTagName("button")[0].innerHTML = "Göstər";
+                
+            }
+        }
+    </script>
+
+</body>
+
+</html>
